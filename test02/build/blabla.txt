@@ -1,0 +1,5 @@
+x vale 12.500000
+i vale 12, d vale 1.234500 e l vale 1234567890987654321
+la radice di x vale 3.535534
+la radice di d vale 1.880302
+Hello, World!
