@@ -1,6 +1,12 @@
 # Binaries #
 ############
-*.
+*
+!*.*
+!*/
+### above lines:
+### ignore all
+### unignore all files with extension
+### unignore all dirs
 
 # Temp build locations #
 source/vs/vs_stuff/*
