@@ -102,7 +102,7 @@ main (void)
     // if (!1) { a; } else {b;} // esegue sempre b
     
     
-    if (! (file = sf_open ("sine.wav", SFM_WRITE, &sfinfo)))
+    if (! (file = sf_open ("/Users/andreaagostini/devel/c/smet20-21/sine.wav", SFM_WRITE, &sfinfo)))
     {    printf ("Error : Not able to open output file.\n") ;
         free (buffer) ;
         return 1 ;

@@ -37,6 +37,12 @@ Thumbs.db
 UpgradeLog.htm
 *.aps
 
+# Audio Files #
+###############
+*.aif
+*.aiff
+*.wav
+
 # Emacs temp files for .gitignore and .gitattributes #
 ######################################################
 .g*~

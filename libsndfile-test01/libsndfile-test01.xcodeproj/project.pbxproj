@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		914FF52D27105A350096B42A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 914FF52C27105A350096B42A /* main.c */; };
+		914FF53527105CE40096B42A /* libsndfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 914FF53427105CE40096B42A /* libsndfile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		914FF52927105A350096B42A /* libsndfile-test01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "libsndfile-test01"; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FF52C27105A350096B42A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		914FF53427105CE40096B42A /* libsndfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsndfile.a; path = ../../../../../../usr/local/lib/libsndfile.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				914FF53527105CE40096B42A /* libsndfile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 			children = (
 				914FF52B27105A350096B42A /* libsndfile-test01 */,
 				914FF52A27105A350096B42A /* Products */,
+				914FF53327105CE40096B42A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +64,14 @@
 				914FF52C27105A350096B42A /* main.c */,
 			);
 			path = "libsndfile-test01";
+			sourceTree = "<group>";
+		};
+		914FF53327105CE40096B42A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				914FF53427105CE40096B42A /* libsndfile.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +250,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "/Users/andreaagostini/utils_and_stuff/libsndfile-1.0.28/src";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,6 +260,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "/Users/andreaagostini/utils_and_stuff/libsndfile-1.0.28/src";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

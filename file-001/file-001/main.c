@@ -48,8 +48,6 @@ int main(int argc, const char * argv[]) {
     incrementa(&i); // &i è l'indirizzo di un int, cioè un int*
     printf("incrementato: %d\n", i);
     
-    
-    
     // analogamente:
     // weird_destructor(&fileptr); // &fileptr è l'indirizzo di un FILE*, cioè un FILE**
     
