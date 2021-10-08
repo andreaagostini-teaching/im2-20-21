@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 #define LONGSAMPLES
 
@@ -21,7 +22,7 @@ typedef float sample; // 32 bit
 
 typedef struct {
     sample *s;
-    int sr;
+    double sr;
     int chans;
     int size;
 } audioclip;
@@ -65,8 +66,24 @@ void audioclip_gain(audioclip *c, double gain)
 void audioclip_rm(audioclip *a, const audioclip *b);
 
 
+void audioclip_sine(audioclip *a, float freq)
+{
+    double freqang = freq * 6.28;
+    
+    for (int n = 0; n < a->size; n++) {
+        
+        // se sia n che a->sr sono interi,
+        // verrà calcolata una divisione intera
+        // (che non vogliamo!)
+        double x = n / a->sr / freq;
+
+    }
+
+}
+
+
 // ACCESSOR / QUERY
-double audioclip_peakamp(const audioclip *c);
+sample audioclip_peakamp(const audioclip *c);
 
 
 // audioclip_join
@@ -88,7 +105,19 @@ int main(int argc, const char * argv[]) {
     audioclip *sineTone = audioclip_new(44100, 1, 441000); // chiamo il costruttore
     
     // ... faccio cose con sineTone...
+     // ma non la libero!
 
+    sineTone = audioclip_new(44100, 1, 220500);
+    
+    // il vecchio oggetto sineTone continua a esistere ma è inaccessibile
+    
+    
+    
+    audioclip_gain(audioclip_new(44100, 1, 441000), 0.5);
+    
+    
+    
+    
     // free(sineTone); // NO!
     audioclip_free(sineTone); // Sì!
 
